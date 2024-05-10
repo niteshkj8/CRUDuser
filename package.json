@@ -1,0 +1,26 @@
+{
+  "name": "intern",
+  "version": "1.0.0",
+  "description": "Managing Persons",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Nitesh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.4.0"
+  }
+}
