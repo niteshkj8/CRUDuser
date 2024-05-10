@@ -21,7 +21,7 @@ const options = {
       info: {
         title: "Users API",
         version: "1.0.0",
-        description: "A simple Express Library API"
+        description: "A simple Express Users API"
       },
   
       servers: [
