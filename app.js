@@ -27,8 +27,12 @@ const options = {
       servers: [
         {
           url: "http://localhost:3000",
-          description: "My API Documentation",
+          description: "Local Deployment"
         },
+        {
+          url: "https://cruduser-kglh.onrender.com",
+          description: "Online Server Deployment"
+        }
       ],
     },
     apis: ["./routes/*.js"],
