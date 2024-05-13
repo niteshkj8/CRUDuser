@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import {} from "dotenv/config";
 
-const mongoURL = process.env.MONGO_URL_LOCAL;
-// const mongoURL = process.env.MONGO_URL;
+// const mongoURL = process.env.MONGO_URL_LOCAL;
+const mongoURL = process.env.MONGO_URL;
 
 mongoose.connect(mongoURL);
 
