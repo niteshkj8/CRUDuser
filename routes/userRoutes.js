@@ -86,6 +86,49 @@ routerUser.get("/", async(req,res)=>{
 
 /**
  * @swagger
+ * /user/{id}:
+ *   get:
+ *     summary: gets user by id
+ *     tags: [User]
+ *     parameters:
+ *        - in: path
+ *          name: id
+ *          description: user id
+ *          required: true
+ *          schema:
+ *            type: string
+ *     responses:
+ *       200:
+ *         decsription: User was fetched
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       404:
+ *         description: user was not found.
+ *       500:
+ *         description: Internal server error.
+ *
+ */
+
+routerUser.get("/:id", async(req,res)=>{
+    try{
+        const userId = req.params.id;
+        const response = await User.findById(userId);
+        if(!response){
+            return res.status(404).json({error: "User not Found"});
+        }
+        console.log("user fetched");
+        res.status(200).json(response);
+    }
+    catch(err){
+        console.log(err);
+        res.status(500).json({error: "Internal Server Error"});
+    }
+});
+
+/**
+ * @swagger
  * /user:
  *   post:
  *     summary: Create a new user

@@ -47,6 +47,16 @@ describe("CRUD Operation", ()=>{
             });
     });
 
+    it("Should get any user by id", (done)=>{
+        server.request(app)
+            .get(`/user/${userId}`)
+            .end((err,res) =>{
+                expect(res).to.have.status(200);
+                expect(res.body).to.be.an("object");
+                done();
+            });
+    });
+
     it("Should update an existing user", (done)=>{
 
         const updatedUserData = {
