@@ -5,7 +5,7 @@ import {} from "dotenv/config";
 
 async function seedData() {
     // Connection URL
-    const url = process.env.MONGO_URL;
+    const url = process.env.MONGO_URL_LOCAL;
     const seed_count = 100;
     mongoose.set("strictQuery", false);
     mongoose.connect(url, {
