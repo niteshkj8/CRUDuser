@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAYkkFhT41SZji_zrKmwj6z9rVm-TdKZvU",
+  apiKey: process.env.apiKey,
   authDomain: "cruduser-aeab6.firebaseapp.com",
   projectId: "cruduser-aeab6",
   storageBucket: "cruduser-aeab6.appspot.com",
